@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidERestaurant</string>
+    <string name="Title">AndroidERestaurant</string>
+    <string name="TitleMain">Bienvenue dans Droid Restaurant</string>
 </resources>
