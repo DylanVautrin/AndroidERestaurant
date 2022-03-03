@@ -21,7 +21,6 @@
         android:layout_width="278dp"
         android:layout_height="192dp"
         android:text="@string/TitleMain"
-        android:autoSizeMaxTextSize="14.5px"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
