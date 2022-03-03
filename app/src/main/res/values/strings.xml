@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">AndroidERestaurant</string>
     <string name="Title">AndroidERestaurant</string>
-    <string name="TitleMain">Bienvenue dans Droid Restaurant</string>
+    <string name="TitleMain">Bienvenue chez RestaurAndroid</string>
+    <string name="MainLogo">Logo android cuistot</string>
+    <string name="Entree">Entrées</string>
+    <string name="Plats">Plats</string>
+    <string name="Desserts">Desserts</string>
 </resources>
