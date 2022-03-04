@@ -6,4 +6,68 @@
     <string name="Entree">Entrées</string>
     <string name="Plats">Plats</string>
     <string name="Desserts">Desserts</string>
+    <string-array name="ListEntree">
+        <item>Saumon</item>
+        <item>Velouté</item>
+        <item>Chèvre feuilletés</item>
+        <item>Tarte thons et tomates</item>
+        <item>Soufflés fromage</item>
+    </string-array>
+    <string-array name="ListDesserts">
+        <item>Tarte tatin</item>
+        <item>Mousse au chocolat</item>
+        <item>Tarte au citron</item>
+        <item>Tiramisu</item>
+        <item>Creme brulée</item>
+    </string-array>
+    <string-array name="ListPlats">
+        <item>Blanquette de veau</item>
+        <item>Boeuf bourguignon</item>
+        <item>Carbonnara</item>
+        <item>Bolognaise</item>
+        <item>Hachis parmentier</item>
+    </string-array>
+    <integer-array name="PriceEntree">
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </integer-array>
+    <integer-array name="PricePlats">
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>11</item>
+        <item>12</item>
+    </integer-array>
+    <integer-array name="PriceDesserts">
+        <item>8</item>
+        <item>7</item>
+        <item>4</item>
+        <item>7</item>
+        <item>6</item>
+    </integer-array>
+    <string-array name="ImgEntree">
+        <item>s</item>
+        <item>v</item>
+        <item>cf</item>
+        <item>ttt</item>
+        <item>sf</item>
+    </string-array>
+    <string-array name="ImgPlats">
+        <item>bv</item>
+        <item>bb</item>
+        <item>c</item>
+        <item>b</item>
+        <item>hp</item>
+    </string-array>
+    <string-array name="ImgDesserts">
+        <item>tt</item>
+        <item>mc</item>
+        <item>tc</item>
+        <item>t</item>
+        <item>cb</item>
+    </string-array>
+
 </resources>
