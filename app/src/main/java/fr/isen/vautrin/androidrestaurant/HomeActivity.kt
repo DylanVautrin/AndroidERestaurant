@@ -3,6 +3,7 @@ package fr.isen.vautrin.androidrestaurant
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -39,5 +40,14 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("HomeActivity","L'activité est arreter")
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("HomeActivity","L'activité est detruite")
     }
 }
