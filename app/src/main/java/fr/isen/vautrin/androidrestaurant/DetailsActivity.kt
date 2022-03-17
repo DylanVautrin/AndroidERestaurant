@@ -5,7 +5,6 @@ import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.squareup.picasso.Picasso
 import fr.isen.vautrin.androidrestaurant.databinding.ActivityDetailsBinding
 
 class DetailsActivity : AppCompatActivity() {
@@ -27,7 +26,10 @@ class DetailsActivity : AppCompatActivity() {
 
         Log.d("DET00",item.toString())
         val url = item.images[0].ifEmpty { null }
-        Picasso.get().load(url).error(R.drawable.noimg).into(binding.imageView)
+        if(item.images.isNotEmpty()){
+        binding.viewPager2.adapter = DetailImagePager(this,item.images)}
+        else
+            binding.imageView2.setImageResource(R.drawable.noimg)
         binding.constraintLayout.setBackgroundColor(color)
         binding.ItemText.text = item.name_fr
         binding.textView2.text = item.ingredients.joinToString { it.name_fr }
