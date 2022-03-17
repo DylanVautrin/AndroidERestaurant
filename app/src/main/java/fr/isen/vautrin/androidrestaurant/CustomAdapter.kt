@@ -6,13 +6,11 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 
-class CustomAdapter(private val mList: List<ItemViewModel>) : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
-    // create new views
+class CustomAdapter(private var mList: List<Item>) : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        // inflates the card_view_design view
-        // that is used to hold list item
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.cell_categorie, parent, false)
 
@@ -22,16 +20,11 @@ class CustomAdapter(private val mList: List<ItemViewModel>) : RecyclerView.Adapt
 
     // binds the list items to a view
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
-        val ItemsViewModel = mList[position]
-
-        // sets the image to the imageview from our itemHolder class
-        holder.imageView.setImageResource(ItemsViewModel.image)
-
-        // sets the text to the textview from our itemHolder class
-        holder.textView.text = ItemsViewModel.text
-        holder.priceView.text = ItemsViewModel.price.toString()
-
+        val item = mList[position]
+        val url = item.images[0].toString().ifEmpty { null }
+        Picasso.get().load(url).into(holder.imageView)
+        holder.textView.text = item.name_fr
+        holder.priceView.text = item.prices[0].price+"€"
     }
 
     // return the number of the items in the list
@@ -44,5 +37,10 @@ class CustomAdapter(private val mList: List<ItemViewModel>) : RecyclerView.Adapt
         val imageView: ImageView = itemView.findViewById(R.id.imageview)
         val textView: TextView = itemView.findViewById(R.id.textView)
         val priceView: TextView = itemView.findViewById(R.id.priceView)
+    }
+
+    fun updateData(data : List<Item>){
+        mList = data
+        notifyDataSetChanged()
     }
 }
