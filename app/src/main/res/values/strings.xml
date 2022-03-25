@@ -6,6 +6,9 @@
     <string name="Entree">Entrées</string>
     <string name="Plats">Plats</string>
     <string name="Desserts">Desserts</string>
+    <string name="PlusIcon">+</string>
+    <string name="MoinsIcon">-</string>
+    <string name="titleCart">Panier</string>
     <string-array name="ListEntree">
         <item>Saumon</item>
         <item>Velouté</item>
